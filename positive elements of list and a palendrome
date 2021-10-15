@@ -1,0 +1,24 @@
+n=int(input())
+N=map(int,input().split())
+t=[]
+l=0
+x=0
+for i in N:
+    if i<0:
+        x=1
+    t.append(i)
+
+if x==0:
+    for i in t:
+        x=i
+        i=str(i)
+        i=i[::-1]
+        if int(i)==x:
+            l+=1
+    if l>=1:
+        print(True)
+    else:
+        print(False)
+else:
+    print(False)
+        
